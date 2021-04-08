@@ -1,0 +1,20 @@
+
+db:
+  connection: mysql
+  host: localhost
+  port: 3306
+
+management:
+  endpoint:
+    refresh:
+      enabled: true
+  endpoints:
+    web:
+      base-path: man
+      exposure:
+        include: '*'
+
+spring:
+  cloud:
+    config:
+      uri: http://localhost:8888
