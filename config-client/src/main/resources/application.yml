@@ -1,3 +1,4 @@
+greeting: 'Hello from client'
 
 db:
   connection: mysql
@@ -10,7 +11,7 @@ management:
       enabled: true
   endpoints:
     web:
-      base-path: man
+      base-path: '/manage'
       exposure:
         include: '*'
 
@@ -18,3 +19,12 @@ spring:
   cloud:
     config:
       uri: http://localhost:8888
+      enabled: true
+      name: config-client
+  application:
+    name: config-client
+  config:
+    use-legacy-processing: true
+
+server:
+  port: 8080
